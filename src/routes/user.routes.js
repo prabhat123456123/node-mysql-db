@@ -4,7 +4,7 @@ const userRouter = require('express').Router();
 
 
 
-userRouter.get('/get-users',validateToken,restrictTo('USER'), getUsers);
+userRouter.get('/get-users',getUsers);
 userRouter.post('/get-user-by-id',validateToken,restrictTo('USER'), getUserById);
 
 module.exports = {userRouter}
